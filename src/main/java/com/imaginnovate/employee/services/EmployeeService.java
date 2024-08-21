@@ -36,17 +36,17 @@ public class EmployeeService implements IEmployeeService{
         double salary = emp.getSalary();
         double tax = 0;
         if (salary > 1000000) {
-            tax = (salary-1000000)/5+(250000/10)+(250000/20);
-        }
-        else if (salary > 750000) {
-            tax = (salary-750000)/10+(250000/20);
+            tax = (salary-1000000)/5+(500000/10)+(250000/20);
         }
         else if (salary > 500000) {
-            tax = (salary-500000)/20;
+            tax = (salary-500000)/10+(250000/20);
+        }
+        else if (salary > 250000) {
+            tax = (salary-250000)/20;
         }
         double cess = 0;
         if (tax > 250000) {
-            cess = tax-(250000/50);
+            cess = tax - 250000)/50;
             tax = tax - cess;
         }
         TaxDto taxDto = new TaxDto();
