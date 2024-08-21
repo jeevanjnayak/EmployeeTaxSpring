@@ -46,7 +46,7 @@ public class EmployeeService implements IEmployeeService{
         }
         double cess = 0;
         if (tax > 250000) {
-            cess = tax - 250000)/50;
+            cess = (tax - 250000)/50;
             tax = tax - cess;
         }
         TaxDto taxDto = new TaxDto();
