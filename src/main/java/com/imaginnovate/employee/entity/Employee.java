@@ -12,6 +12,7 @@ import java.util.List;
 @Data
 @ToString
 @RequiredArgsConstructor
+@Builder
 
 @Entity
 public class Employee {
@@ -53,5 +54,6 @@ public class Employee {
         this.phoneNumbers = employeeDto.getPhoneNumbers();
         this.startDate = employeeDto.getStartDate();
     }
+
 
 }
